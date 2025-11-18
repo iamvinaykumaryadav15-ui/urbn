@@ -4,21 +4,27 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
-    <!-- SEO Metadata --><title>Urbn Repair Center | AC, Fridge, Washing Machine & R.O. Repair in Agra</title>
-    <meta name="description" content="Urbn Repair Center — Trusted since 1995 in Agra Cantt. Expert repair of Air Conditioners, Refrigerators, Washing Machines, R.O., Microwave Ovens, and more. Call +91 9719111348 or WhatsApp now.">
-    <meta name="keywords" content="appliance repair Agra, AC repair Agra Cantt, washing machine repair, fridge repair, RO service Agra, Urbn Repair Center">
+    <!-- SEO Metadata -->
+    <title>Urbn Appliance Store | AC, Fridge, Washing Machine, Geyser & R.O. Sales in Agra</title>
+    <meta name="description" content="Urbn Appliance Store — Trusted since 1995 in Agra Cantt. Expert sales of Air Conditioners, Refrigerators, Washing Machines, R.O., Geysers, Microwave Ovens, and more. Call +91 9719111348 or WhatsApp now.">
+    <meta name="keywords" content="appliance store Agra, AC sales Agra Cantt, washing machine dealer, fridge store, geyser sales Agra, RO sales Agra, Urbn Appliance Store">
     
-    <!-- Tailwind CSS --><script src="https://cdn.tailwindcss.com"></script>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
     
-    <!-- Fonts (Poppins for Headings, Roboto for Body) --><link rel="preconnect" href="https://fonts.googleapis.com">
+    <!-- Fonts (Poppins for Headings, Roboto for Body) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@700;800&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
     
-    <!-- Font Awesome for Icons --><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     
-    <!-- AOS (Animate on Scroll) CSS --><link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
+    <!-- AOS (Animate on Scroll) CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
     
-    <!-- Custom Styles --><style>
+    <!-- Custom CSS -->
+    <style>
         :root {
             --color-primary: #E71D1D; /* Bright Red */
             --color-secondary: #00AEEF; /* Sky Blue */
@@ -60,20 +66,17 @@
             transition: transform 0.5s ease-in-out;
         }
 
-        /* Animated "Since 1995" Badge */
-        @keyframes pulsate {
-            0%, 100% {
-                transform: scale(1);
-                box-shadow: 0 0 5px rgba(231, 29, 29, 0.4);
-            }
-            50% {
-                transform: scale(1.05);
-                box-shadow: 0 0 15px rgba(231, 29, 29, 0.8);
-            }
+        /* Mobile Menu Transition */
+        #mobile-menu {
+            transition: max-height 0.3s ease-in-out, opacity 0.3s ease-in-out;
+            max-height: 0;
+            opacity: 0;
+            overflow: hidden;
         }
-        /* .badge-since-1995 {
-            animation: pulsate 2.5s infinite;
-        } */
+        #mobile-menu.open {
+            max-height: 400px; /* Approximate height of menu */
+            opacity: 1;
+        }
 
         /* Simple Before/After Toggle */
         .ba-toggle-container {
@@ -94,63 +97,121 @@
 </head>
 <body class="bg-white">
 
-    <!-- Header (Sticky) --><header id="header" class="sticky top-0 z-50 w-full bg-white shadow-lg"> <!-- Changed shadow-md to shadow-lg --><nav class="container mx-auto px-4 py-3 flex justify-between items-center">
-            <!-- Logo --><a href="#home" class="text-3xl font-extrabold text-secondary">
-                URBN
+    <!-- Top Bar with Contact Details -->
+    <div class="bg-gray-900 text-white py-2 text-sm">
+        <div class="container mx-auto px-4 flex justify-between items-center">
+            <div class="flex items-center space-x-4">
+                <a href="tel:+919719111348" class="flex items-center hover:text-secondary transition-colors">
+                    <i class="fas fa-phone-alt mr-2 text-secondary"></i>
+                    <span>+91 9719111348</span>
+                </a>
+                <span class="hidden md:inline text-gray-500">|</span>
+                <a href="mailto:info@urbnappliance.com" class="hidden md:flex items-center hover:text-secondary transition-colors">
+                    <i class="fas fa-envelope mr-2 text-secondary"></i>
+                    <span>info@urbnappliance.com</span>
+                </a>
+            </div>
+            <div class="flex items-center space-x-3">
+                <span class="hidden md:inline">Follow Us:</span>
+                <a href="#" class="hover:text-secondary transition-colors"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" class="hover:text-secondary transition-colors"><i class="fab fa-instagram"></i></a>
+                <a href="#" class="hover:text-secondary transition-colors"><i class="fab fa-twitter"></i></a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Header (Sticky) -->
+    <header id="header" class="sticky top-0 z-50 w-full bg-white shadow-lg">
+        <nav class="container mx-auto px-4 py-3 flex justify-between items-center">
+            <!-- Logo -->
+            <a href="#home" class="text-3xl font-extrabold text-secondary">
+                URBAN
             </a>
             
-            <!-- Desktop Navigation & Contact --><div class="hidden md:flex items-center space-x-6">
-                <a href="#home" class="text-gray-600 hover:text-primary">Home</a>
-                <a href="#services" class="text-gray-600 hover:text-primary">Services</a>
-                <a href="#about" class="text-gray-600 hover:text-primary">About</a>
-                <a href="#gallery" class="text-gray-600 hover:text-primary">Gallery</a>
-                <a href="tel:+919719111348" class="flex items-center space-x-2 text-gray-700 hover:text-secondary">
+            <!-- Desktop Navigation & Contact -->
+            <div class="hidden md:flex items-center space-x-6">
+                <a href="#home" class="text-gray-600 hover:text-primary transition-colors">Home</a>
+                <a href="#services" class="text-gray-600 hover:text-primary transition-colors">Services</a>
+                <a href="#about" class="text-gray-600 hover:text-primary transition-colors">About</a>
+                <a href="#gallery" class="text-gray-600 hover:text-primary transition-colors">Gallery</a>
+                <a href="tel:+919719111348" class="flex items-center space-x-2 text-gray-700 hover:text-secondary transition-colors">
                     <i class="fas fa-phone"></i>
                     <span>Call Now</span>
                 </a>
-                <a href="https://wa.me/919719111348" target="_blank" class="flex items-center space-x-2 text-gray-700 hover:text-green-500">
+                <a href="https://wa.me/919719111348" target="_blank" class="flex items-center space-x-2 text-gray-700 hover:text-green-500 transition-colors">
                     <i class="fab fa-whatsapp"></i>
                     <span>WhatsApp</span>
                 </a>
-                <a href="#contact" class="flex items-center space-x-2 text-gray-700 hover:text-primary">
+                <a href="#contact" class="flex items-center space-x-2 text-gray-700 hover:text-primary transition-colors">
                     <i class="fas fa-map-marker-alt"></i>
                     <span>Address</span>
                 </a>
             </div>
             
-            <!-- Mobile Icons --><div class="md:hidden flex items-center space-x-4">
+            <!-- Mobile Icons & Hamburger -->
+            <div class="md:hidden flex items-center space-x-4">
                 <a href="tel:+919719111348" class="text-2xl text-secondary">
                     <i class="fas fa-phone"></i>
                 </a>
                 <a href="https://wa.me/919719111348" target="_blank" class="text-2xl text-green-500">
                     <i class="fab fa-whatsapp"></i>
                 </a>
+                <!-- Hamburger Menu Button -->
+                <button id="mobile-menu-btn" class="text-2xl text-gray-700 focus:outline-none">
+                    <i class="fas fa-bars"></i>
+                </button>
             </div>
         </nav>
+
+        <!-- Mobile Menu (Hidden by default) -->
+        <div id="mobile-menu" class="bg-white border-t border-gray-100 md:hidden shadow-inner">
+            <div class="flex flex-col px-4 py-2 space-y-2">
+                <a href="#home" class="mobile-link block py-2 text-gray-700 hover:text-primary hover:bg-gray-50 rounded px-2">Home</a>
+                <a href="#services" class="mobile-link block py-2 text-gray-700 hover:text-primary hover:bg-gray-50 rounded px-2">Services</a>
+                <a href="#about" class="mobile-link block py-2 text-gray-700 hover:text-primary hover:bg-gray-50 rounded px-2">About</a>
+                <a href="#gallery" class="mobile-link block py-2 text-gray-700 hover:text-primary hover:bg-gray-50 rounded px-2">Gallery</a>
+                <a href="#contact" class="mobile-link block py-2 text-gray-700 hover:text-primary hover:bg-gray-50 rounded px-2">Contact Us</a>
+            </div>
+        </div>
     </header>
 
-    <!-- Floating Call Button --><a href="tel:+919719111348" title="Call Now" class="fixed bottom-16 right-4 z-40 bg-secondary text-white w-12 h-12 rounded-full flex items-center justify-center shadow-lg transform hover:scale-110 transition-transform">
+    <!-- Floating Call Button -->
+    <a href="tel:+919719111348" title="Call Now" class="fixed bottom-16 right-4 z-40 bg-secondary text-white w-12 h-12 rounded-full flex items-center justify-center shadow-lg transform hover:scale-110 transition-transform">
         <i class="fas fa-phone text-xl"></i>
     </a>
 
-    <!-- Floating WhatsApp Button --><a href="https://wa.me/919719111348" target="_blank" title="Chat on WhatsApp" class="fixed bottom-4 right-4 z-40 bg-green-500 text-white w-12 h-12 rounded-full flex items-center justify-center shadow-lg transform hover:scale-110 transition-transform">
+    <!-- Floating WhatsApp Button -->
+    <a href="https://wa.me/919719111348" target="_blank" title="Chat on WhatsApp" class="fixed bottom-4 right-4 z-40 bg-green-500 text-white w-12 h-12 rounded-full flex items-center justify-center shadow-lg transform hover:scale-110 transition-transform">
         <i class="fab fa-whatsapp text-2xl"></i>
     </a>
 
 
-    <!-- Main Content --><main>
+    <!-- Main Content -->
+    <main>
 
-        <!-- 1. Hero Section --><section id="home" class="relative w-full h-[70vh] md:h-[90vh] overflow-hidden">
-            <!-- Slides --><div id="hero-slider" class="relative w-full h-full">
-                <!-- Slide 1: AC Repair --><div class="hero-slide absolute inset-0 w-full h-full bg-cover bg-center transition-opacity duration-1000" style="background-image: url('https://assets.gadgets360cdn.com/pricee/assets/category/202006/brand-kent-water-purifiers-1200x628_1591712789.jpg'); opacity: 1;"></div>
-                <!-- Slide 2: Fridge Repair --><div class="hero-slide absolute inset-0 w-full h-full bg-cover bg-center transition-opacity duration-1000" style="background-image: url('https://aquapro.abudhabi/wp-content/themes/bigbazaar/banner1.jpg'); opacity: 0;"></div>
-                <!-- Slide 3: Washing Machine --><div class="hero-slide absolute inset-0 w-full h-full bg-cover bg-center transition-opacity duration-1000" style="background-image: url('https://enagic.co.in/wp-content/uploads/2020/12/banner2-e1607669462372.jpg'); opacity: 0;"></div>
-                <!-- Slide 4: R.O. Purifier --><div class="hero-slide absolute inset-0 w-full h-full bg-cover bg-center transition-opacity duration-1000" style="background-image: url('https://merlinro.in/wp-content/uploads/2023/09/Banner-21-Sept-2023-1.png'); opacity: 0;"></div>
+        <!-- 1. Hero Section -->
+        <section id="home" class="relative w-full h-[70vh] md:h-[90vh] overflow-hidden">
+            <!-- Slides -->
+            <div id="hero-slider" class="relative w-full h-full">
+                <!-- Slide 1: Geyser (Featured Image) -->
+                <div class="hero-slide absolute inset-0 w-full h-full bg-cover bg-center transition-opacity duration-1000" style="background-image: url('https://www.goldmedalindia.com/blog/wp-content/uploads/2024/12/Water-Heater-vs-Geyser-Understanding-the-Difference-and-Making-the-Right-Choice.jpg'); opacity: 1;"></div>
+                <!-- Slide 2: AC -->
+                <div class="hero-slide absolute inset-0 w-full h-full bg-cover bg-center transition-opacity duration-1000" style="background-image: url('https://www.gadgets360.com/static/v1/images/og_ac.jpg'); opacity: 0;"></div>
+                <!-- Slide 3: Washing Machine -->
+                <div class="hero-slide absolute inset-0 w-full h-full bg-cover bg-center transition-opacity duration-1000" style="background-image: url('https://hometriangle.com/blogs/content/images/2024/01/Washing-machine-with-two-laundry-baskets-full-of-clothes-in-front-1.png'); opacity: 0;"></div>
+                <!-- Slide 4: Oil Heater -->
+                <div class="hero-slide absolute inset-0 w-full h-full bg-cover bg-center transition-opacity duration-1000" style="background-image: url('https://www.livemint.com/lm-img/img/2025/11/17/600x338/OFR_1763379631456_1763379650458.png'); opacity: 0;"></div>
+                <!-- Slide 5: General Service -->
+                <div class="hero-slide absolute inset-0 w-full h-full bg-cover bg-center transition-opacity duration-1000" style="background-image: url('https://www.rightcliq.in/images/services/about/rightcliq-service-about-2_886_450.webp?v=6'); opacity: 0;"></div>
+                <!-- Slide 6: RO Purifier -->
+                <div class="hero-slide absolute inset-0 w-full h-full bg-cover bg-center transition-opacity duration-1000" style="background-image: url('https://www.kent.co.in/blog/wp-content/uploads/2018/09/Kents-Next-Gen-Purifiers-.jpg'); opacity: 0;"></div>
             </div>
             
-            <!-- Overlay --><div class="absolute inset-0 bg-black bg-opacity-60"></div>
+            <!-- Overlay -->
+            <div class="absolute inset-0 bg-black bg-opacity-60"></div>
             
-            <!-- Overlay Text --><div class="absolute inset-0 flex flex-col justify-center items-center md:items-start text-center md:text-left p-6 md:px-12 lg:px-24">
+            <!-- Overlay Text -->
+            <div class="absolute inset-0 flex flex-col justify-center items-center md:items-start text-center md:text-left p-6 md:px-12 lg:px-24">
                 <h1 class="text-3xl md:text-5xl lg:text-6xl font-extrabold leading-tight">
                     <!-- Urbn Repair Center -->
                 </h1>
@@ -161,9 +222,10 @@
                     <!-- We fix ACs, Fridges, Washing Machines, R.O., Microwave, and more – Fast & Reliable Service in Agra -->
                 </p>
                 
-                <!-- CTAs --><div class="flex flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-4 mt-8">
+                <!-- CTAs -->
+                <div class="flex flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-4 mt-8">
                     <a href="#contact" class="bg-primary text-white py-2 px-6 rounded-lg text-md font-bold shadow-lg transition-all duration-300 hover:shadow-xl hover:-translate-y-0.5">
-                        <i class="fas fa-wrench mr-2"></i> Book a Service Now
+                        <i class="fas fa-shopping-cart mr-2"></i> Shop Now
                     </a>
                     <a href="https://wa.me/919719111348" target="_blank" class="bg-green-500 text-white py-2 px-6 rounded-lg text-md font-bold shadow-lg transition-all duration-300 hover:shadow-xl hover:-translate-y-0.5">
                         <i class="fab fa-whatsapp mr-2"></i> WhatsApp for Quick Help
@@ -176,10 +238,11 @@
             </div>
         </section>
 
-        <!-- 2. Quick Contact Bar --><section class="bg-secondary text-white p-4 md:p-6">
+        <!-- 2. Quick Contact Bar -->
+        <section class="bg-secondary text-white p-4 md:p-6">
             <div class="container mx-auto flex flex-col md:flex-row justify-between items-center text-center md:text-left">
                 <h2 class="text-lg md:text-2xl font-bold mb-2 md:mb-0">
-                    Call or WhatsApp for quick appliance repair at your doorstep
+                    Call or WhatsApp for the best deals on new appliances
                 </h2>
                 <div class="flex space-x-4">
                     <a href="tel:+919719111348" class="bg-white text-primary font-bold py-2 px-5 rounded-lg hover:bg-gray-100 transition-all">
@@ -192,13 +255,15 @@
             </div>
         </section>
 
-        <!-- 3. About Us --><section id="about" class="py-16 md:py-24 overflow-x-hidden">
+        <!-- 3. About Us -->
+        <section id="about" class="py-16 md:py-24 overflow-x-hidden">
             <div class="container mx-auto px-6 grid md:grid-cols-2 gap-12 items-center">
-                <!-- Text Content --><div data-aos="fade-right">
+                <!-- Text Content -->
+                <div data-aos="fade-right">
                     <span class="text-primary font-bold">About Us</span>
-                    <h2 class="text-3xl md:text-4xl font-bold mt-2">Expert Appliance Care Since 1995</h2>
+                    <h2 class="text-3xl md:text-4xl font-bold mt-2">Your Appliance Experts Since 1995</h2>
                     <p class="text-lg text-gray-600 mt-6 leading-relaxed">
-                        Established in 1995, Urbn Repair Center has been serving Agra Cantt and nearby areas with expert repair and maintenance services for all major home appliances. We repair Air Conditioners, Refrigerators, Washing Machines, Microwave Ovens, and R.O. Purifiers with professional care and genuine parts.
+                        Established in 1995, Urbn Appliance Store has been serving Agra Cantt and nearby areas with expert sales and services for all major home appliances. We sell Air Conditioners, Refrigerators, Washing Machines, Microwave Ovens, Geysers, and R.O. Purifiers with professional care and genuine parts.
                     </p>
                     <div class="mt-8">
                         <span class="inline-block bg-secondary text-white text-lg font-bold py-3 px-5 rounded-lg shadow-lg">
@@ -206,70 +271,95 @@
                         </span>
                     </div>
                 </div>
-                <!-- Image --><div class="flex justify-center" data-aos="fade-left">
-                    <img src="https://assets.gadgets360cdn.com/pricee/assets/category/202006/brand-kent-water-purifiers-1200x628_1591712789.jpg" alt="Smiling Technician Working (TEMP - Replace with real photo)" class="rounded-lg shadow-xl object-cover w-full h-auto">
+                <!-- Image -->
+                <div class="flex justify-center" data-aos="fade-left">
+                    <img src="Gemini_Generated_Image_fxmzgcfxmzgcfxmz.png" alt="Our Appliance Showroom" class="rounded-lg shadow-xl object-cover w-full h-auto">
                 </div>
             </div>
         </section>
 
-        <!-- 4. Our Services --><section id="services" class="py-16 md:py-24 bg-gray-50 overflow-x-hidden">
+        <!-- 4. Our Services -->
+        <section id="services" class="py-16 md:py-24 bg-gray-50 overflow-x-hidden">
             <div class="container mx-auto px-6">
                 <div class="text-center mb-12" data-aos="fade-up">
                     <span class="text-primary font-bold">Our Services</span>
-                    <h2 class="text-3xl md:text-4xl font-bold mt-2">What We Repair</h2>
+                    <h2 class="text-3xl md:text-4xl font-bold mt-2">What We Sell</h2>
                     <p class="text-lg text-gray-600 mt-4 max-w-2xl mx-auto">
-                        We provide expert repair for all major home appliances, all brands, and all models.
+                        We provide expert sales and service for all major home appliances, all brands, and all models.
                     </p>
                 </div>
                 
-                <!-- Service Cards --><div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                    <!-- Service Card 1 --><div class="bg-white rounded-lg shadow-lg overflow-hidden transform hover:-translate-y-2 transition-transform duration-300" data-aos="fade-up" data-aos-delay="100"> <!-- Removed border, changed shadow-md to shadow-lg --><img src="https://assets.gadgets360cdn.com/pricee/assets/category/202006/brand-kent-water-purifiers-1200x628_1591712789.jpg" alt="Air Conditioner Repair (TEMP - Replace with real photo)" class="w-full h-48 object-cover">
+                <!-- Service Cards -->
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- Service Card 1 -->
+                    <div class="bg-white rounded-lg shadow-lg overflow-hidden transform hover:-translate-y-2 transition-transform duration-300" data-aos="fade-up" data-aos-delay="100"> 
+                        <img src="https://amstradworld.com/wp-content/uploads/2024/02/Amstrad-Global-Series-AC-AMSi25Gi3C.png" alt="Air Conditioners" class="w-full h-48 object-cover">
                         <div class="p-6">
-                            <h3 class="text-2xl font-bold">Air Conditioner Repair</h3>
+                            <h3 class="text-2xl font-bold">Air Conditioners</h3>
                             <p class="text-gray-600 mt-2">Split, Window, and Inverter models.</p>
-                            <a href="#contact" class="inline-block bg-primary text-white font-semibold py-2 px-4 rounded-lg mt-4 shadow-md transition-all duration-300 hover:shadow-lg hover:-translate-y-0.5">Book Now</a>
+                            <a href="#contact" class="inline-block bg-primary text-white font-semibold py-2 px-4 rounded-lg mt-4 shadow-md transition-all duration-300 hover:shadow-lg hover:-translate-y-0.5">Enquire Now</a>
                         </div>
                     </div>
-                    <!-- Service Card 2 --><div class="bg-white rounded-lg shadow-lg overflow-hidden transform hover:-translate-y-2 transition-transform duration-300" data-aos="fade-up" data-aos-delay="200"> <!-- Removed border, changed shadow-md to shadow-lg --><img src="httpsa.placeholder.co/600x400/00aeef/white?text=Refrigerator+Repair" alt="Refrigerator Repair (TEMP - Replace with real photo)" class="w-full h-48 object-cover" onerror="this.src='https://aquapro.abudhabi/wp-content/themes/bigbazaar/banner1.jpg'">
+                    <!-- Service Card 2 -->
+                    <div class="bg-white rounded-lg shadow-lg overflow-hidden transform hover:-translate-y-2 transition-transform duration-300" data-aos="fade-up" data-aos-delay="200">
+                        <img src="https://www.jagranimages.com/images/newimg/15022024/15_02_2024-type_of_fridges,_type_of_refrigerators_23653951_175513881.jpg" alt="Refrigerators" class="w-full h-48 object-cover">
                         <div class="p-6">
-                            <h3 class="text-2xl font-bold">Refrigerator Repair</h3>
+                            <h3 class="text-2xl font-bold">Refrigerators</h3>
                             <p class="text-gray-600 mt-2">All types, all brands, single & double door.</p>
-                            <a href="#contact" class="inline-block bg-primary text-white font-semibold py-2 px-4 rounded-lg mt-4 shadow-md transition-all duration-300 hover:shadow-lg hover:-translate-y-0.5">Book Now</a>
+                            <a href="#contact" class="inline-block bg-primary text-white font-semibold py-2 px-4 rounded-lg mt-4 shadow-md transition-all duration-300 hover:shadow-lg hover:-translate-y-0.5">Enquire Now</a>
                         </div>
                     </div>
-                    <!-- Service Card 3 --><div class="bg-white rounded-lg shadow-lg overflow-hidden transform hover:-translate-y-2 transition-transform duration-300" data-aos="fade-up" data-aos-delay="300"> <!-- Removed border, changed shadow-md to shadow-lg --><img src="https://enagic.co.in/wp-content/uploads/2020/12/banner2-e1607669462372.jpg" alt="Washing Machine Repair (TEMP - Replace with real photo)" class="w-full h-48 object-cover">
+                    <!-- Service Card 3 -->
+                    <div class="bg-white rounded-lg shadow-lg overflow-hidden transform hover:-translate-y-2 transition-transform duration-300" data-aos="fade-up" data-aos-delay="300">
+                        <img src="https://images.herzindagi.info/article-img/2025/10/07/1200x675/best-washing-machine-brands-in-india-14785.webp" alt="Washing Machines" class="w-full h-48 object-cover">
                         <div class="p-6">
-                            <h3 class="text-2xl font-bold">Washing Machine Repair</h3>
+                            <h3 class="text-2xl font-bold">Washing Machines</h3>
                             <p class="text-gray-600 mt-2">Fully/Semi-Automatic, Top & Front Load.</p>
-                            <a href="#contact" class="inline-block bg-primary text-white font-semibold py-2 px-4 rounded-lg mt-4 shadow-md transition-all duration-300 hover:shadow-lg hover:-translate-y-0.5">Book Now</a>
+                            <a href="#contact" class="inline-block bg-primary text-white font-semibold py-2 px-4 rounded-lg mt-4 shadow-md transition-all duration-300 hover:shadow-lg hover:-translate-y-0.5">Enquire Now</a>
                         </div>
                     </div>
-                    <!-- Service Card 4 --><div class="bg-white rounded-lg shadow-lg overflow-hidden transform hover:-translate-y-2 transition-transform duration-300" data-aos="fade-up" data-aos-delay="100"> <!-- Removed border, changed shadow-md to shadow-lg --><img src="https://merlinro.in/wp-content/uploads/2023/09/Banner-21-Sept-2023-1.png" alt="R.O. Purifier Service (TEMP - Replace with real photo)" class="w-full h-48 object-cover">
+                    <!-- Service Card 4 -->
+                    <div class="bg-white rounded-lg shadow-lg overflow-hidden transform hover:-translate-y-2 transition-transform duration-300" data-aos="fade-up" data-aos-delay="100">
+                        <img src="https://www.pureitwater.com/media/mageplaza/blog/post/h/o/how-does-ro-work-what-are-the-stages-of-ro_uv-water-purifiers-2_1.jpg" alt="R.O. Purifiers" class="w-full h-48 object-cover">
                         <div class="p-6">
-                            <h3 class="text-2xl font-bold">R.O. Purifier Service</h3>
-                            <p class="text-gray-600 mt-2">Installation & filter replacement.</p>
-                            <a href="#contact" class="inline-block bg-primary text-white font-semibold py-2 px-4 rounded-lg mt-4 shadow-md transition-all duration-300 hover:shadow-lg hover:-translate-y-0.5">Book Now</a>
+                            <h3 class="text-2xl font-bold">R.O. Purifiers</h3>
+                            <p class="text-gray-600 mt-2">Sales, installation & filter replacement.</p>
+                            <a href="#contact" class="inline-block bg-primary text-white font-semibold py-2 px-4 rounded-lg mt-4 shadow-md transition-all duration-300 hover:shadow-lg hover:-translate-y-0.5">Enquire Now</a>
                         </div>
                     </div>
-                    <!-- Service Card 5 --><div class="bg-white rounded-lg shadow-lg overflow-hidden transform hover:-translate-y-2 transition-transform duration-300" data-aos="fade-up" data-aos-delay="200"> <!-- Removed border, changed shadow-md to shadow-lg --><img src="https://assets.gadgets360cdn.com/pricee/assets/category/202006/brand-kent-water-purifiers-1200x628_1591712789.jpg" alt="Microwave/Oven Repair (TEMP - Replace with real photo)" class="w-full h-48 object-cover">
+                    <!-- Service Card 5 -->
+                    <div class="bg-white rounded-lg shadow-lg overflow-hidden transform hover:-translate-y-2 transition-transform duration-300" data-aos="fade-up" data-aos-delay="200">
+                        <img src="https://www.jagranimages.com/images/newimg/13092024/13_09_2024-cheapest_microwave_oven_23796222.webp" alt="Microwave Ovens" class="w-full h-48 object-cover">
                         <div class="p-6">
-                            <h3 class="text-2xl font-bold">Microwave/Oven Repair</h3>
-                            <p class="text-gray-600 mt-2">Heating & electronic fixes for all brands.</p>
-                            <a href="#contact" class="inline-block bg-primary text-white font-semibold py-2 px-4 rounded-lg mt-4 shadow-md transition-all duration-300 hover:shadow-lg hover:-translate-y-0.5">Book Now</a>
+                            <h3 class="text-2xl font-bold">Microwave Ovens</h3>
+                            <p class="text-gray-600 mt-2">All top brands and models available.</p>
+                            <a href="#contact" class="inline-block bg-primary text-white font-semibold py-2 px-4 rounded-lg mt-4 shadow-md transition-all duration-300 hover:shadow-lg hover:-translate-y-0.5">Enquire Now</a>
                         </div>
                     </div>
-                    <!-- Service Card 6 --><div class="bg-white rounded-lg shadow-lg overflow-hidden transform hover:-translate-y-2 transition-transform duration-300" data-aos="fade-up" data-aos-delay="300"> <!-- Removed border, changed shadow-md to shadow-lg --><img src="https://aquapro.abudhabi/wp-content/themes/bigbazaar/banner1.jpg" alt="Oil Heater Service (TEMP - Replace with real photo)" class="w-full h-48 object-cover">
+                    <!-- Service Card 6 -->
+                    <div class="bg-white rounded-lg shadow-lg overflow-hidden transform hover:-translate-y-2 transition-transform duration-300" data-aos="fade-up" data-aos-delay="300">
+                        <img src="https://www.hindustantimes.com/ht-img/img/2025/11/17/550x309/Old_heaters_1763372066343_1763372089614.jpg" alt="Oil Heaters" class="w-full h-48 object-cover">
                         <div class="p-6">
-                            <h3 class="text-2xl font-bold">Oil Heater Service</h3>
-                            <p class="text-gray-600 mt-2">Seasonal maintenance and repair.</p>
-                            <a href="#contact" class="inline-block bg-primary text-white font-semibold py-2 px-4 rounded-lg mt-4 shadow-md transition-all duration-300 hover:shadow-lg hover:-translate-y-0.5">Book Now</a>
+                            <h3 class="text-2xl font-bold">Oil Heaters</h3>
+                            <p class="text-gray-600 mt-2">Seasonal sales and service.</p>
+                            <a href="#contact" class="inline-block bg-primary text-white font-semibold py-2 px-4 rounded-lg mt-4 shadow-md transition-all duration-300 hover:shadow-lg hover:-translate-y-0.5">Enquire Now</a>
+                        </div>
+                    </div>
+                    <!-- Service Card 7 (NEW) -->
+                    <div class="bg-white rounded-lg shadow-lg overflow-hidden transform hover:-translate-y-2 transition-transform duration-300" data-aos="fade-up" data-aos-delay="100">
+                        <img src="https://www.goldmedalindia.com/blog/wp-content/uploads/2024/12/Water-Heater-vs-Geyser-Understanding-the-Difference-and-Making-the-Right-Choice.jpg" alt="Geysers" class="w-full h-48 object-cover">
+                        <div class="p-6">
+                            <h3 class="text-2xl font-bold">Geysers</h3>
+                            <p class="text-gray-600 mt-2">Instant & storage geysers, all brands.</p>
+                            <a href="#contact" class="inline-block bg-primary text-white font-semibold py-2 px-4 rounded-lg mt-4 shadow-md transition-all duration-300 hover:shadow-lg hover:-translate-y-0.5">Enquire Now</a>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- 5. Why Choose Us --><section class="py-16 md:py-24 overflow-x-hidden">
+        <!-- 5. Why Choose Us -->
+        <section class="py-16 md:py-24 overflow-x-hidden">
             <div class="container mx-auto px-6">
                 <div class="text-center mb-12" data-aos="fade-up">
                     <span class="text-primary font-bold">Our Promise</span>
@@ -277,13 +367,13 @@
                 </div>
                 <div class="grid grid-cols-2 md:grid-cols-3 gap-8 text-center">
                     <div class="flex flex-col items-center p-4" data-aos="fade-up" data-aos-delay="100">
-                        <i class="fas fa-clock text-5xl text-secondary"></i>
-                        <h3 class="text-xl font-bold mt-4">Fast Same-Day Service</h3>
-                        <p class="text-gray-600">Quick response and on-time service.</p>
+                        <i class="fas fa-truck-fast text-5xl text-secondary"></i>
+                        <h3 class="text-xl font-bold mt-4">Fast Same-Day Delivery</h3>
+                        <p class="text-gray-600">Quick response and on-time delivery.</p>
                     </div>
                     <div class="flex flex-col items-center p-4" data-aos="fade-up" data-aos-delay="200">
-                        <i class="fas fa-user-cog text-5xl text-secondary"></i>
-                        <h3 class="text-xl font-bold mt-4">Experienced Technicians</h3>
+                        <i class="fas fa-users-cog text-5xl text-secondary"></i>
+                        <h3 class="text-xl font-bold mt-4">Knowledgeable Staff</h3>
                         <p class="text-gray-600">Skilled professionals since 1995.</p>
                     </div>
                     <div class="flex flex-col items-center p-4" data-aos="fade-up" data-aos-delay="300">
@@ -298,8 +388,8 @@
                     </div>
                     <div class="flex flex-col items-center p-4" data-aos="fade-up" data-aos-delay="200">
                         <i class="fas fa-home text-5xl text-secondary"></i>
-                        <h3 class="text-xl font-bold mt-4">Doorstep Service</h3>
-                        <p class="text-gray-600">We come to your home for repairs.</p>
+                        <h3 class="text-xl font-bold mt-4">Doorstep Delivery</h3>
+                        <p class="text-gray-600">We come to your home for installation.</p>
                     </div>
                     <div class="flex flex-col items-center p-4" data-aos="fade-up" data-aos-delay="300">
                         <i class="fab fa-whatsapp-square text-5xl text-secondary"></i>
@@ -310,52 +400,59 @@
             </div>
         </section>
 
-        <!-- 6. Gallery / Work Showcase --><section id="gallery" class="py-16 md:py-24 bg-gray-50 overflow-x-hidden">
+        <!-- 6. Gallery / Work Showcase -->
+        <section id="gallery" class="py-16 md:py-24 bg-gray-50 overflow-x-hidden">
             <div class="container mx-auto px-6">
                 <div class="text-center mb-12" data-aos="fade-up">
                     <span class="text-primary font-bold">Gallery</span>
-                    <h2 class="text-3xl md:text-4xl font-bold mt-2">Our Work Showcase</h2>
-                    <p class="text-lg text-gray-600 mt-4 max-w-2xl mx-auto">
-                        (Temporary Photos – To be replaced with client's photos)
-                    </p>
+                    <h2 class="text-3xl md:text-4xl font-bold mt-2">Our Product Showcase</h2>
                 </div>
-                <!-- Motley Image Grid --><div class="grid grid-cols-2 md:grid-cols-4 gap-4" data-aos="fade-up" data-aos-delay="200">
-                    <img src="https://assets.gadgets360cdn.com/pricee/assets/category/202006/brand-kent-water-purifiers-1200x628_1591712789.jpg" alt="Tools and Parts (TEMP)" class="rounded-lg shadow w-full h-full object-cover">
-                    <img src="https://aquapro.abudhabi/wp-content/themes/bigbazaar/banner1.jpg" alt="AC Outdoor Unit (TEMP)" class="rounded-lg shadow w-full h-full object-cover col-span-1 md:row-span-2">
-                    <img src="https://enagic.co.in/wp-content/uploads/2020/12/banner2-e1607669462372.jpg" alt="Fixed Appliance (TEMP)" class="rounded-lg shadow w-full h-full object-cover">
-                    <img src="httpsf.placeholder.co/600x400/00aeef/white?text=Technician+at+Work" alt="Technician at Work (TEMP)" class="rounded-lg shadow w-full h-full object-cover" onerror="this.src='https://merlinro.in/wp-content/uploads/2023/09/Banner-21-Sept-2023-1.png'">
-                    <img src="https://merlinro.in/wp-content/uploads/2023/09/Banner-21-Sept-2023-1.png" alt="Control Board (TEMP)" class="rounded-lg shadow w-full h-full object-cover">
-                    <img src="httpsB.placeholder.co/600x400/333333/white?text=Smiling+Customer" alt="Smiling Customer (TEMP)" class="rounded-lg shadow w-full h-full object-cover" onerror="this.src='https://assets.gadgets360cdn.com/pricee/assets/category/202006/brand-kent-water-purifiers-1200x628_1591712789.jpg'">
+                <!-- Motley Image Grid -->
+                <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4" data-aos="fade-up" data-aos-delay="200">
+                    <!-- 1. AC Product -->
+                    <img src="https://amstradworld.com/wp-content/uploads/2024/02/Amstrad-Global-Series-AC-AMSi25Gi3C.png" alt="Modern AC Unit" class="rounded-lg shadow-lg w-full h-48 md:h-64 object-cover hover:scale-105 transition-transform duration-300">
+                    
+                    <!-- 2. Refrigerator -->
+                    <img src="https://www.jagranimages.com/images/newimg/15022024/15_02_2024-type_of_fridges,_type_of_refrigerators_23653951_175513881.jpg" alt="Refrigerators" class="rounded-lg shadow-lg w-full h-48 md:h-64 object-cover hover:scale-105 transition-transform duration-300">
+                    
+                    <!-- 3. Washing Machine Product -->
+                    <img src="https://images.herzindagi.info/article-img/2025/10/07/1200x675/best-washing-machine-brands-in-india-14785.webp" alt="Washing Machines" class="rounded-lg shadow-lg w-full h-48 md:h-64 object-cover hover:scale-105 transition-transform duration-300">
+                    
+                    <!-- 4. RO Purifier Product -->
+                    <img src="https://www.pureitwater.com/media/mageplaza/blog/post/h/o/how-does-ro-work-what-are-the-stages-of-ro_uv-water-purifiers-2_1.jpg" alt="RO Purifiers" class="rounded-lg shadow-lg w-full h-48 md:h-64 object-cover hover:scale-105 transition-transform duration-300">
+                    
+                    <!-- 5. Microwave -->
+                    <img src="https://www.jagranimages.com/images/newimg/13092024/13_09_2024-cheapest_microwave_oven_23796222.webp" alt="Microwave Ovens" class="rounded-lg shadow-lg w-full h-48 md:h-64 object-cover hover:scale-105 transition-transform duration-300">
+                    
+                    <!-- 6. Oil Heater -->
+                    <img src="https://www.hindustantimes.com/ht-img/img/2025/11/17/550x309/Old_heaters_1763372066343_1763372089614.jpg" alt="Oil Heaters" class="rounded-lg shadow-lg w-full h-48 md:h-64 object-cover hover:scale-105 transition-transform duration-300">
+                    
+                    <!-- 7. Geyser -->
+                    <img src="https://www.goldmedalindia.com/blog/wp-content/uploads/2024/12/Water-Heater-vs-Geyser-Understanding-the-Difference-and-Making-the-Right-Choice.jpg" alt="Geysers" class="rounded-lg shadow-lg w-full h-48 md:h-64 object-cover hover:scale-105 transition-transform duration-300">
+                    
+                    <!-- 8. AC Lifestyle -->
+                    <img src="https://www.gadgets360.com/static/v1/images/og_ac.jpg" alt="Cooling Solutions" class="rounded-lg shadow-lg w-full h-48 md:h-64 object-cover hover:scale-105 transition-transform duration-300">
+                    
+                    <!-- 9. Washing Machine Lifestyle -->
+                    <img src="https://hometriangle.com/blogs/content/images/2024/01/Washing-machine-with-two-laundry-baskets-full-of-clothes-in-front-1.png" alt="Laundry Solutions" class="rounded-lg shadow-lg w-full h-48 md:h-64 object-cover hover:scale-105 transition-transform duration-300">
+                    
+                    <!-- 10. Heater Lifestyle -->
+                    <img src="https://www.livemint.com/lm-img/img/2025/11/17/600x338/OFR_1763379631456_1763379650458.png" alt="Winter Comfort" class="rounded-lg shadow-lg w-full h-48 md:h-64 object-cover hover:scale-105 transition-transform duration-300">
+                    
+                    <!-- 11. Service/General -->
+                    <img src="https://www.rightcliq.in/images/services/about/rightcliq-service-about-2_886_450.webp?v=6" alt="Professional Service" class="rounded-lg shadow-lg w-full h-48 md:h-64 object-cover hover:scale-105 transition-transform duration-300">
+                    
+                    <!-- 12. RO Lifestyle -->
+                    <img src="https://www.kent.co.in/blog/wp-content/uploads/2018/09/Kents-Next-Gen-Purifiers-.jpg" alt="Clean Drinking Water" class="rounded-lg shadow-lg w-full h-48 md:h-64 object-cover hover:scale-105 transition-transform duration-300">
+                    
+                    <!-- 13. Extra Oil Heater Image -->
+                    <img src="https://images-cdn.ubuy.co.in/66e41c0ceb708830a20780ae-air-choice-oil-heater-700w-oil-filled.jpg" alt="Portable Heaters" class="rounded-lg shadow-lg w-full h-48 md:h-64 object-cover hover:scale-105 transition-transform duration-300">
                 </div>
             </div>
         </section>
 
-        <!-- 7. Before/After Slider Section --><section class="py-16 md:py-24 overflow-x-hidden">
-            <div class="container mx-auto px-6">
-                <div class="text-center mb-12" data-aos="fade-up">
-                    <span class="text-primary font-bold">Our Results</span>
-                    <h2 class="text-3xl md:text-4xl font-bold mt-2">From Broken to Fixed</h2>
-                </div>
-                <div class="grid md:grid-cols-2 gap-8">
-                    <!-- Before/After 1 --><div class="text-center" data-aos="fade-up" data-aos-delay="100">
-                        <div class="ba-toggle-container rounded-lg shadow-lg overflow-hidden cursor-pointer" onclick="toggleImage(this, 'ba-img-1', 'https-before-1', 'https-after-1')"> <!-- Changed shadow-md to shadow-lg --><img id="ba-img-1" src="https://placehold.co/600x400/ff9999/c70000?text=BEFORE:+Leaking+Fridge" data-before="https://placehold.co/600x400/ff9999/c70000?text=BEFORE:+Leaking+Fridge" data-after="https://placehold.co/600x400/99ff99/00c700?text=AFTER:+Fixed+and+Clean" alt="Before and After Fridge Repair (TEMP)" class="w-full object-cover">
-                            <span id="ba-label-1" class="ba-label">BEFORE</span>
-                        </div>
-                        <h3 class="text-xl font-bold mt-4">Refrigerator Repair</h3>
-                        <p class="text-gray-600">Click image to see the result!</p>
-                    </div>
-                    <!-- Before/After 2 --><div class="text-center" data-aos="fade-up" data-aos-delay="200">
-                        <div class="ba-toggle-container rounded-lg shadow-lg overflow-hidden cursor-pointer" onclick="toggleImage(this, 'ba-img-2', 'https-before-2', 'https-after-2')"> <!-- Changed shadow-md to shadow-lg --><img id="ba-img-2" src="https://placehold.co/600x400/ff9999/c70000?text=BEFORE:+Dirty+AC+Coil" data-before="https://placehold.co/600x400/ff9999/c70000?text=BEFORE:+Dirty+AC+Coil" data-after="https://placehold.co/600x400/99ff99/00c700?text=AFTER:+Cleaned+AC+Coil" alt="Before and After AC Service (TEMP)" class="w-full object-cover">
-                            <span id="ba-label-2" class="ba-label">BEFORE</span>
-                        </div>
-                        <h3 class="text-xl font-bold mt-4">AC Service</h3>
-                        <p class="text-gray-600">Click image to see the result!</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- 8. Customer Testimonials --><section class="py-16 md:py-24 bg-gray-50 overflow-x-hidden">
+        <!-- 8. Customer Testimonials -->
+        <section class="py-16 md:py-24 bg-gray-50 overflow-x-hidden">
             <div class="container mx-auto px-6">
                 <div class="text-center mb-12" data-aos="fade-up">
                     <span class="text-primary font-bold">Testimonials</span>
@@ -364,32 +461,39 @@
                 
                 <div class="relative w-full max-w-3xl mx-auto overflow-hidden" data-aos="fade-up" data-aos-delay="200">
                     <div id="testimonial-track" class="flex testimonial-slider-track">
-                        <!-- Slide 1 --><div class="w-full flex-shrink-0 p-4">
-                            <div class="bg-white p-8 rounded-lg shadow-lg text-center"> <!-- Changed shadow-md to shadow-lg --><div class="text-yellow-400 text-2xl">
+                        <!-- Slide 1 -->
+                        <div class="w-full flex-shrink-0 p-4">
+                            <div class="bg-white p-8 rounded-lg shadow-lg text-center"> 
+                                <div class="text-yellow-400 text-2xl">
                                     <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
                                 </div>
-                                <p class="text-lg text-gray-700 italic mt-4">"Quick service, honest rates! My AC was cooling like new in an hour. Very impressed."</p>
+                                <p class="text-lg text-gray-700 italic mt-4">"Great prices and fast delivery! My new AC is working perfectly. Very impressed."</p>
                                 <h4 class="text-xl font-bold text-primary mt-6">— Rahul K., Agra</h4>
                             </div>
                         </div>
-                        <!-- Slide 2 --><div class="w-full flex-shrink-0 p-4">
-                            <div class="bg-white p-8 rounded-lg shadow-lg text-center"> <!-- Changed shadow-md to shadow-lg --><div class="text-yellow-400 text-2xl">
+                        <!-- Slide 2 -->
+                        <div class="w-full flex-shrink-0 p-4">
+                            <div class="bg-white p-8 rounded-lg shadow-lg text-center"> 
+                                <div class="text-yellow-400 text-2xl">
                                     <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
                                 </div>
-                                <p class="text-lg text-gray-700 italic mt-4">"Fixed my fridge in one visit. The technician was polite and knew his work well. Thank you."</p>
+                                <p class="text-lg text-gray-700 italic mt-4">"Bought my fridge from them. The staff was polite and helped me choose the right model. Thank you."</p>
                                 <h4 class="text-xl font-bold text-primary mt-6">— Mrs. Khan</h4>
                             </div>
                         </div>
-                        <!-- Slide 3 --><div class="w-full flex-shrink-0 p-4">
-                            <div class="bg-white p-8 rounded-lg shadow-lg text-center"> <!-- Changed shadow-md to shadow-lg --><div class="text-yellow-400 text-2xl">
+                        <!-- Slide 3 -->
+                        <div class="w-full flex-shrink-0 p-4">
+                            <div class="bg-white p-8 rounded-lg shadow-lg text-center"> 
+                                <div class="text-yellow-400 text-2xl">
                                     <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
                                 </div>
-                                <p class="text-lg text-gray-700 italic mt-4">"Very professional service for my R.O. purifier. They explained the issue clearly. Highly recommended."</p>
+                                <p class="text-lg text-gray-700 italic mt-4">"Very professional service for my R.O. purifier installation. They explained the issue clearly. Highly recommended."</p>
                                 <h4 class="text-xl font-bold text-primary mt-6">— Amit P.</h4>
                             </div>
                         </div>
                     </div>
-                    <!-- Slider Controls --><button id="testi-prev" class="absolute top-1/2 left-0 md:-left-8 transform -translate-y-1/2 bg-white rounded-full shadow-md w-12 h-12 flex items-center justify-center text-primary hover:bg-gray-100">
+                    <!-- Slider Controls -->
+                    <button id="testi-prev" class="absolute top-1/2 left-0 md:-left-8 transform -translate-y-1/2 bg-white rounded-full shadow-md w-12 h-12 flex items-center justify-center text-primary hover:bg-gray-100">
                         <i class="fas fa-chevron-left"></i>
                     </button>
                     <button id="testi-next" class="absolute top-1/2 right-0 md:-right-8 transform -translate-y-1/2 bg-white rounded-full shadow-md w-12 h-12 flex items-center justify-center text-primary hover:bg-gray-100">
@@ -399,13 +503,15 @@
             </div>
         </section>
 
-        <!-- 9. Contact & Booking Form --><section id="contact" class="py-16 md:py-24 overflow-x-hidden">
+        <!-- 9. Contact & Booking Form -->
+        <section id="contact" class="py-16 md:py-24 overflow-x-hidden">
             <div class="container mx-auto px-6 grid md:grid-cols-2 gap-12">
-                <!-- Booking Form --><div data-aos="fade-right">
+                <!-- Booking Form -->
+                <div data-aos="fade-right">
                     <span class="text-primary font-bold">Contact Us</span>
-                    <h2 class="text-3xl md:text-4xl font-bold mt-2">Book Your Service</h2>
+                    <h2 class="text-3xl md:text-4xl font-bold mt-2">Enquire Now</h2>
                     <p class="text-lg text-gray-600 mt-4 mb-6">
-                        Fill out the form below to book your repair service.
+                        Fill out the form below to get in touch for our latest products.
                     </p>
                     <form id="booking-form" class="space-y-4">
                         <input type="text" id="form-name" placeholder="Your Name" class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:border-secondary focus:ring-2 focus:ring-secondary focus:ring-opacity-50 transition-all duration-200" required>
@@ -417,27 +523,30 @@
                             <option value="Washing Machine">Washing Machine</option>
                             <option value="R.O. Purifier">R.O. Purifier</option>
                             <option value="Microwave/Oven">Microwave/Oven</option>
+                            <option value="Geyser">Geyser</option> 
                             <option value="Oil Heater">Oil Heater</option>
                             <option value="Other">Other</option>
                         </select>
-                        <textarea id="form-issue" placeholder="Describe the issue" rows="4" class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:border-secondary focus:ring-2 focus:ring-secondary focus:ring-opacity-50 transition-all duration-200"></textarea>
+                        <textarea id="form-issue" placeholder="Your Message (e.g., 'Interested in a new AC')" rows="4" class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:border-secondary focus:ring-2 focus:ring-secondary focus:ring-opacity-50 transition-all duration-200"></textarea>
                         <input type="text" id="form-address" placeholder="Your Address / Area" class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:border-secondary focus:ring-2 focus:ring-secondary focus:ring-opacity-50 transition-all duration-200" required>
-                        <input type="date" id="form-date" class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:border-secondary focus:ring-2 focus:ring-secondary focus:ring-opacity-50 transition-all duration-200" title="Preferred Date">
+                        <input type="date" id="form-date" class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:border-secondary focus:ring-2 focus:ring-secondary focus:ring-opacity-50 transition-all duration-200" title="Preferred Delivery Date">
                         
                         <div class="flex flex-col md:flex-row space-y-3 md:space-y-0 md:space-x-4">
                             <button type="submit" class="w-full bg-primary text-white font-bold py-2 px-5 rounded-lg shadow-md hover:shadow-lg transition-all duration-300 hover:-translate-y-0.5">
-                                <i class="fas fa-paper-plane mr-2"></i> Submit Request
+                                <i class="fas fa-paper-plane mr-2"></i> Send Enquiry
                             </button>
-                            <!-- Removed WhatsApp button from here --></div>
+                        </div>
                     </form>
-                    <p id="form-success-msg" class="text-green-600 font-bold mt-4 hidden">Thank you! Your request has been submitted.</p>
+                    <p id="form-success-msg" class="text-green-600 font-bold mt-4 hidden">Thank you! Your enquiry has been sent.</p>
                 </div>
                 
-                <!-- Map & Info --><div class="mt-8 md:mt-0" data-aos="fade-left">
+                <!-- Map & Info -->
+                <div class="mt-8 md:mt-0" data-aos="fade-left">
                     <span class="text-primary font-bold">Find Us</span>
                     <h2 class="text-3xl md:text-4xl font-bold mt-2">Our Location</h2>
                     
-                    <!-- Google Map Embed --><div class="w-full h-64 md:h-80 rounded-lg overflow-hidden shadow-lg mt-6">
+                    <!-- Google Map Embed -->
+                    <div class="w-full h-64 md:h-80 rounded-lg overflow-hidden shadow-lg mt-6">
                         <iframe 
                             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3549.954753738018!2d77.9894103149959!3d27.15856798302061!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x397471a70aaaaaab%3A0x1d3851b69f6d4d1a!2sAgra%20Cantt!5e0!3m2!1sen!2sin!4v1678888888888!5m2!1sen!2sin" 
                             width="100%" 
@@ -469,13 +578,15 @@
         </section>
     </main>
 
-    <!-- 10. Footer --><footer class="bg-gray-900 text-gray-300 py-12">
+    <!-- 10. Footer -->
+    <footer class="bg-gray-900 text-gray-300 py-12">
         <div class="container mx-auto px-6 grid md:grid-cols-3 gap-8">
-            <!-- Column 1: Brand & Contact --><div>
+            <!-- Column 1: Brand & Contact -->
+            <div>
                 <a href="#home" class="text-4xl font-extrabold text-secondary">
                     URBN
                 </a>
-                <p class="mt-4 text-sm">Expert Home Appliance Repair Since 1995</p>
+                <p class="mt-4 text-sm">Your Trusted Appliance Dealer Since 1995</p>
                 <div class="mt-6 space-y-3">
                     <p class="flex items-start">
                         <i class="fas fa-map-marker-alt w-5 mt-1 mr-2"></i>
@@ -492,18 +603,20 @@
                 </div>
             </div>
             
-            <!-- Column 2: Quick Links --><div>
+            <!-- Column 2: Quick Links -->
+            <div>
                 <h4 class="text-xl font-bold text-white mb-4">Quick Links</h4>
                 <ul class="space-y-2">
                     <li><a href="#home" class="hover:text-white">Home</a></li>
                     <li><a href="#services" class="hover:text-white">Services</a></li>
                     <li><a href="#about" class="hover:text-white">About Us</a></li>
                     <li><a href="#gallery" class="hover:text-white">Gallery</a></li>
-                    <li><a href="#contact" class="hover:text-white">Book Service</a></li>
+                    <li><a href="#contact" class="hover:text-white">Contact Us</a></li>
                 </ul>
             </div>
             
-            <!-- Column 3: Service Area --><div>
+            <!-- Column 3: Service Area -->
+            <div>
                 <h4 class="text-xl font-bold text-white mb-4">Service Area</h4>
                 <p>We proudly serve all of Agra, including Agra Cantt, Sadar Bazar, Taj Ganj, Dayalbagh, Sikandra, and nearby areas.</p>
                 <div class="mt-4">
@@ -513,18 +626,37 @@
             </div>
         </div>
         
-        <!-- Footer Bottom --><div class="border-t border-gray-700 mt-8 pt-8 text-center">
+        <!-- Footer Bottom -->
+        <div class="border-t border-gray-700 mt-8 pt-8 text-center">
             <p class="text-sm text-gray-400">
                 © <span id="current-year">2025</span> Urbn Repair Center — All Rights Reserved.
             </p>
         </div>
     </footer>
 
-    <!-- AOS (Animate on Scroll) JS --><script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <!-- AOS (Animate on Scroll) JS -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 
-    <!-- JavaScript --><script>
+    <!-- JavaScript -->
+    <script>
         document.addEventListener('DOMContentLoaded', function() {
             
+            // --- Mobile Menu Toggle Logic ---
+            const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+            const mobileMenu = document.getElementById('mobile-menu');
+            const mobileLinks = document.querySelectorAll('.mobile-link');
+
+            mobileMenuBtn.addEventListener('click', () => {
+                mobileMenu.classList.toggle('open');
+            });
+
+            // Close menu when a link is clicked
+            mobileLinks.forEach(link => {
+                link.addEventListener('click', () => {
+                    mobileMenu.classList.remove('open');
+                });
+            });
+
             // --- Hero Slider ---
             const slides = document.querySelectorAll('#hero-slider .hero-slide');
             let currentSlide = 0;
@@ -565,8 +697,7 @@
             }, 7000); // Change every 7 seconds
 
 
-            // --- Before/After Toggle ---
-            // Attached via onclick in the HTML, but here is the function
+            // --- Before/After Toggle (Legacy Support if needed) ---
             window.toggleImage = function(container, imgId, beforeUrl, afterUrl) {
                 const img = container.querySelector('img');
                 const label = container.querySelector('.ba-label');
@@ -584,9 +715,6 @@
                 }
             }
             
-            // --- WhatsApp Form Submission (Now handled by the floating button) ---
-            // Removed the event listener for the WhatsApp button as it's no longer in the form.
-
             // --- Regular Form Submission (Example) ---
             const bookingForm = document.getElementById('booking-form');
             const successMsg = document.getElementById('form-success-msg');
